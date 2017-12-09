@@ -6,6 +6,7 @@ default: pdf
 
 clean:
 	${LATEX} -c
+	rm -f *.vtc
 
 veryclean: clean
 	${LATEX} -C
