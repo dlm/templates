@@ -1,0 +1,44 @@
+%
+% brownletter_example.tex - an example latex file to illustrate brownletter.cls
+%
+% Copyright 2003, Nesime Tatbul (tatbul@cs.brown.edu)
+%
+
+\documentclass[11pt]{brownletter}
+
+\name{David L. Millman} % used as signature, if no signature is specified
+
+\signature{David L. Millman}
+
+% \date{December 15, 2003} % if no date specified, today's date is used
+
+% \subject{Brown letterhead} % optional subject line
+
+\begin{document}
+
+\begin{letter}{
+    David L. Millman \\ 
+    Assistant Professor \\
+    School of Computing\\
+    Montana State University\\
+    david.millman@montana.edu
+}
+
+\opening{Dear CDS\&E-MSS}
+
+ADD LETTER CONTENT HERE!!
+
+\closing{Sincerely,}
+
+% for ENCLOSED
+% \encl{brownletter.cls}
+
+% for PS
+% \ps{Please see the enclosed file.}
+
+% for CC
+% \cc{J. Kirschenbaum}
+
+\end{letter}
+
+\end{document}
