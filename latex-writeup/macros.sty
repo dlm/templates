@@ -1,0 +1,27 @@
+\usepackage{amsfonts} % cool things like mathbb
+\usepackage{fullpage} % changes the margin
+\usepackage{graphicx} % add images
+\usepackage{url} % for addresses
+\usepackage{xcolor}
+
+\graphicspath{{./}{images/}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newcommand{\secref}[1]{Section~\ref{sec:#1}}
+
+\newcommand{\etal}[0]{\emph{et al.~}}
+
+\newcommand{\payAttention}[3]{{\color{#1}[[\textbf{#2: }#3]]}}
+\newcommand{\todo}[1]{\payAttention{red}{TODO}{#1}}
+\newcommand{\xSays}[3]{\payAttention{#1}{#2 Says}{#3}}
+
+\newcommand{\dave}[1]{\xSays{magenta}{Dave}{#1}}
+\newcommand{\collaborator}[1]{{\color{blue}[[\textbf{Collaborator Says: }#1]]}}
+
+
+
+
+
