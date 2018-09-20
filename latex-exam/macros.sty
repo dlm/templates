@@ -1,0 +1,56 @@
+\ProvidesPackage{exam}
+
+\pagenumbering{gobble}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\course}{CSCI 441}
+\newcommand{\proj}{Final}
+
+\newcommand{\pageHeaderFormat}[2]{
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[below left] (coin)  at (current page.north east) {
+            \begin{tabular}{l p{6cm}}
+                \\
+                \course: & \proj \\
+                #2
+            \end{tabular}
+        };
+    \end{tikzpicture}
+    \vspace{-1.5cm}
+    \section*{#1}
+}
+
+\newcommand{\pageHeader}[1]{
+    \pageHeaderFormat{#1}{
+                Last Name: & \hrule \\ 
+                First Name: & \hrule  \\
+            }
+}
+
+\newcounter{examProblemCounter}
+\newcommand{\examProblemPts}[1]{
+    \clearpage
+    \addtocounter{examProblemCounter}{1}
+    \pageHeaderFormat{Problem \theexamProblemCounter~(#1 Points)}{
+        Initials: & \hrule \\ 
+    }
+}
+
+\newcommand{\examProblem}{
+    \examProblemPts{10}
+}
+
+
+\newcommand{\additionalSpace}{
+    \vspace*{\fill}
+    \begin{flushright}
+        (more space on next page)
+    \end{flushright}
+    \clearpage
+    \pageHeaderFormat{}{Initials: & \hrule \\}
+}
+
+\newcommand{\veryShortAnswer}{\vspace{3cm} }
+\newcommand{\shortAnswer}{\vspace{7cm} }
+\newcommand{\remainderOfPage}{\vspace*{\fill}\clearpage}
+
