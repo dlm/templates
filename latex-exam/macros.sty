@@ -28,6 +28,7 @@
 }
 
 \newcounter{examProblemCounter}
+\newcounter{examProblemPartCounter}
 \newcommand{\examProblemPts}[1]{
     \clearpage
     \addtocounter{examProblemCounter}{1}
@@ -36,10 +37,16 @@
     }
 }
 
-\newcommand{\examProblem}{
-    \examProblemPts{10}
+\newcommand{\examProblem}[1]{
+    \examProblemPts{#1}
+    \setcounter{examProblemPartCounter}{0}
 }
 
+\renewcommand{\thesubsection}{Part \Roman{subsection}}
+\newcommand{\problemPart}[1]{
+    \addtocounter{examProblemPartCounter}{1}
+    \subsection*{Part \Roman{examProblemPartCounter} (#1 points)}
+}
 
 \newcommand{\additionalSpace}{
     \vspace*{\fill}
