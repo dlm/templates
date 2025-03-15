@@ -37,7 +37,7 @@
             echo "- Go into the flake.nix and update the 'description'"
             echo ""
             echo "If this is a new project:"
-            echo "- run `go mod init`"
+            echo "- run 'go mod init'"
             echo ""
             echo "If this is an existing project:"
             echo "- add additional project dependencies"
